@@ -231,9 +231,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service
 
-# Hide
 PRODUCT_PACKAGES += \
-    NoCutoutOverlay
+    chargeonlymode
 
 # HIDL
 PRODUCT_PACKAGES += \

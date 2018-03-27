@@ -307,7 +307,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #Bringup properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.atfwd.start=true
+    persist.vendor.radio.atfwd.start=true
 
 #set maximum supported adapter voltage
 PRODUCT_PROPERTY_OVERRIDES += \

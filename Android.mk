@@ -104,4 +104,7 @@ $(WCNSS_MAC_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_INI_SYMLINK) $(WCNSS_MAC_SYMLINK)
 
+# Hide overlay
+include device/xiaomi/tulip/overlay/packages/apps/overlays/NoCutoutOverlay/Android.mk
+
 endif

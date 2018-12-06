@@ -94,6 +94,13 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
 PRODUCT_PROPERTY_OVERRIDES +=  \
     drm.service.enabled=true
 
+#Set AudioFlinger client heap size
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.af.client_heap_size_kbyte=7168 \
+    vendor.audio_hal.in_period_size=144 \
+    vendor.audio_hal.period_multiplier=3 \
+    vendor.audio.adm.buffering.ms=2
+
 # Enable stm-events
 PRODUCT_PROPERTY_OVERRIDES +=  \
     persist.debug.coresight.config=stm-events

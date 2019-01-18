@@ -18,26 +18,26 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
-$(call inherit-product-if-exists, vendor/xiaomi/MiuiCamera/whyred.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/MiuiCamera/tulip.mk)
 
-# Inherit from whyred device
-$(call inherit-product, device/xiaomi/whyred/device.mk)
+# Inherit from tulip device
+$(call inherit-product, device/xiaomi/tulip/device.mk)
 
 # Inherit some common Mokee stuff.
 $(call inherit-product, vendor/mk/config/common_full_phone.mk)
 
-PRODUCT_NAME := mk_whyred
+PRODUCT_NAME := mk_tulip
 PRODUCT_BRAND := Xiaomi
-PRODUCT_DEVICE := whyred
+PRODUCT_DEVICE := tulip
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi Note 5
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE="whyred" \
-    PRODUCT_NAME="whyred" \
-    BUILD_FINGERPRINT="xiaomi/whyred/whyred:8.1.0/OPM1.171019.011/V10.2.1.0.OEICNFK:user/release-keys" \
-    PRIVATE_BUILD_DESC="whyred-user 8.1.0 OPM1.171019.011 V10.2.1.0.OEICNFK release-keys"
+    TARGET_DEVICE="tulip" \
+    PRODUCT_NAME="tulip" \
+    BUILD_FINGERPRINT="xiaomi/tulip/tulip:8.1.0/OPM1.171019.011/V10.2.1.0.OEICNFK:user/release-keys" \
+    PRIVATE_BUILD_DESC="tulip-user 8.1.0 OPM1.171019.011 V10.2.1.0.OEICNFK release-keys"
 
 TARGET_VENDOR := Xiaomi

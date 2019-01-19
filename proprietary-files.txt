@@ -1288,6 +1288,8 @@ vendor/firmware/fpctzappfingerprint.mdt
 # Fingerprint sensor
 lib64/libsoftkeymaster.so:vendor/lib64/libsoftkeymaster.so
 -vendor/app/FingerprintExtensionService/FingerprintExtensionService.apk
+-vendor/app/QFingerprintService/QFingerprintService.apk
+framework/vendor.qti.hardware.fingerprint-V1.0-java.jar
 vendor/bin/qfp-daemon
 vendor/etc/permissions/com.fingerprints.extension.xml
 vendor/framework/com.fingerprints.extension.jar

@@ -189,6 +189,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #disable UBWC for camera
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.expose.aux=1 \
+    persist.camera.ltm.overlap=13 \
     persist.camera.preview.ubwc=0 \
     persist.camera.stats.test=0 \
     persist.camera.depth.focus.cb=0 \
@@ -201,20 +203,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #exif info for camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.exif.make=Xiaomi \
-    persist.sys.exif.model=RedmiNote5
+    persist.sys.exif.model=RedmiNote6Pro
 
 #properties for camera front flash lux
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.flash.low.lux=390 \
     persist.flash.light.lux=340 \
-    persist.imx376_ofilm.low.lux=310 \
-    persist.imx376_ofilm.light.lux=280 \
-    persist.imx376_sunny.low.lux=310 \
-    persist.imx376_sunny.light.lux=280 \
+    persist.imx376_ofilm.low.lux=410 \
+    persist.imx376_ofilm.light.lux=380 \
+    persist.imx376_sunny.low.lux=410 \
+    persist.imx376_sunny.light.lux=380 \
     persist.ov13855_sunny.low.lux=385 \
     persist.ov13855_sunny.light.lux=370 \
-    persist.s5k3l8_ofilm.low.lux=379 \
-    persist.s5k3l8_ofilm.light.lux=367
+    persist.remosaic.low.lux=226 \
+    persist.s5k3l8_ofilm.low.lux=350 \
+    persist.s5k3l8_ofilm.light.lux=320
 
 #
 # PROPERTIES FOR IMS

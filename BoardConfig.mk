@@ -242,10 +242,6 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
 
-# Vendor init
-TARGET_INIT_VENDOR_LIB := libinit_tulip
-TARGET_RECOVERY_DEVICE_MODULES := libinit_tulip
-
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_QCOM_WLAN_SDK := true

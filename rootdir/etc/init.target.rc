@@ -315,3 +315,8 @@ on property:persist.sys.display_gamma=1
 
 on property:persist.sys.display_gamma=2
     write /sys/class/graphics/fb0/msm_fb_gamma 2
+
+service remosaic_daemon /vendor/bin/remosaic_daemon
+    class late_start
+    user camera
+    group camera

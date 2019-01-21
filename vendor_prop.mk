@@ -38,7 +38,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.offload.buffer.size.kb=64 \
     audio.offload.min.duration.secs=30 \
     audio.offload.video=true \
-    vendor.audio.offload.track.enable=true \
+    vendor.audio.offload.track.enable=false \
     audio.deep_buffer.media=true \
     vendor.voice.path.for.pcm.voip=true \
     vendor.audio.offload.multiaac.enable=true \
@@ -179,6 +179,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.dev_ori=false \
     ro.vendor.sensors.pmd=true \
+    ro.vendor.sensors.pug = true \
     ro.vendor.sensors.sta_detect=true \
     ro.vendor.sensors.mot_detect=true
 
@@ -343,6 +344,43 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #Ignore the wrong IWLAN report when UE in W/G mode.
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.data_con_rprt=1
+
+# Assertive display
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.qcom.ad.sensortype=2 \
+    ro.qcom.ad=1
+
+# Audio
+PRODUCT_PROPERTY_OVERRIDES += \
+    audio.chk.cal.us=0 \
+    persist.audio.soundfx.type=mi \
+    ro.audio.para.version=AUDIO_HMI_L6660_A01_20180919_V15 \
+    ro.audio.soundfx.dirac=true \
+    ro.audio.soundfx.type=mi \
+    ro.vendor.audio.sos=true \
+    ro.vendor.audio.soundfx.type=mi \
+
+# Misc
+PRODUCT_PROPERTY_OVERRIDES += \
+    keyguard.no_require_sim=true \
+    ro.am.reschedule_service=true \
+    ro.colorpick_adjust=true \
+    ro.control_privapp_permissions=log \
+    ro.opa.eligible_device=true \
+    ro.sys.fw.use_trim_settings=true \
+    sys.autobrightness_optimize=true \
+    sys.boe_ft8719_length=43 \
+    sys.boe_ft8719_offset=13 \
+    sys.paper_mode_max_level=32 \
+    sys.shenchao_nt36672a_length=47 \
+    sys.shenchao_nt36672a_offset=12 \
+    sys.tianma_nt36672a_length=44 \
+    sys.tianma_nt36672a_offset=22
+
+# QTI
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.config.zram=true \
+    ro.vendor.qti.sys.fw.bservice_enable=true
 
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \

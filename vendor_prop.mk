@@ -382,6 +382,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.config.zram=true \
     ro.vendor.qti.sys.fw.bservice_enable=true
 
+# Camera HAL 3
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.HAL3.enabled=1
+
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.mk.maintainer=rama982

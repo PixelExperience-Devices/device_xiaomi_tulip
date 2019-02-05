@@ -161,6 +161,9 @@ on boot
     # an ack packet comes out of order
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
+    # Make MTU adjusting for sometimes cannot access to internet
+    write /proc/sys/net/ipv4/tcp_mtu_probing 1
+
     # Set the console loglevel to < KERN_INFO
     # Set the default message loglevel to KERN_INFO
     write /proc/sys/kernel/printk "6 6 1 7"
@@ -452,8 +455,9 @@ service vendor.qcom-c_main-sh /vendor/bin/init.class_main.sh
 
 on property:vold.decrypt=trigger_restart_framework
     start vendor.qcom-c_main-sh
+    start config_bt_addr
     start wcnss-service
-    start vendor.cnss_diag
+#   start vendor.cnss_diag
 
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
@@ -652,4 +656,10 @@ on property:sys.thermal.isincall=0
 service vendor.goodix_script /vendor/bin/init.goodix.sh
     class late_start
     user system
+    oneshot
+
+service config_bt_addr /vendor/bin/btnvtool -O
+    class core
+    user bluetooth
+    group bluetooth radio
     oneshot

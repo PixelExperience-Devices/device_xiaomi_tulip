@@ -97,6 +97,8 @@ on post-fs-data
     mkdir /persist/qti_fp 0700 system system
     mkdir /data/misc/seemp 0700 system system
     mkdir /data/misc/tloc 0700 system drmrpc
+    mkdir /data/thermal 0771 system system
+    mkdir /data/thermal/config 0771 system system
 
 on boot
     start vendor.rmt_storage
@@ -144,6 +146,12 @@ service vendor.per_proxy /system/vendor/bin/pm-proxy
 
 on property:init.svc.vendor.per_mgr=running
     start vendor.per_proxy
+
+on property:camera.thermal_lc=12
+    write /sys/class/thermal/thermal_message/sconfig 12
+
+on property:camera.thermal_lc=0
+    write /sys/class/thermal/thermal_message/sconfig 0
 
 on property:sys.powerctl=*
     stop vendor.per_proxy
@@ -227,23 +235,23 @@ service vendor.ppd /system/vendor/bin/mm-pp-dpps
     socket pps stream 0660 system system
     disabled
 
-on property:init.svc.surfaceflinger=stopped
-    stop vendor.ppd
+#on property:init.svc.surfaceflinger=stopped
+#    stop vendor.ppd
 
-on property:init.svc.surfaceflinger=running
-    start vendor.ppd
+#on property:init.svc.surfaceflinger=running
+#    start vendor.ppd
 
-on property:init.svc.surfaceflinger=restarting
-    stop vendor.ppd
+#on property:init.svc.surfaceflinger=restarting
+#    stop vendor.ppd
 
-on property:init.svc.zygote=stopped
-    stop vendor.ppd
+#on property:init.svc.zygote=stopped
+#    stop vendor.ppd
 
-on property:init.svc.zygote=running
-    start vendor.ppd
+#on property:init.svc.zygote=running
+#    start vendor.ppd
 
-on property:init.svc.zygote=restarting
-    stop vendor.ppd
+#on property:init.svc.zygote=restarting
+#    stop vendor.ppd
 
 on property:sys.boot_completed=1
     setprop sys.io.scheduler "bfq"

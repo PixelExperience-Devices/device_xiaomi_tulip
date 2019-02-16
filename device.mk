@@ -292,6 +292,9 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# Performance
+include vendor/qcom/common/qti-vendor.mk
+
 # Power
 PRODUCT_PACKAGES += \
     power.qcom

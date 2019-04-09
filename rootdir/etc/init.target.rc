@@ -120,6 +120,9 @@ on boot
     chown system system /mnt/vendor/persist/sensors/sns.reg
 #spk pa-cal lct-20180914   
     chmod 0664 /dev/tiload_node
+# Add by rama982 for generic DT2W start
+    chown system input /dev/input/event2
+# Add by rama982 for generic DT2W end
 
 #Create folder dump yuv images while debugging
     mkdir /data/vendor/camera 0770 camera camera

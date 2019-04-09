@@ -56,8 +56,8 @@ vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so|d49d27f9a9003434ca673d0e02f2fb2b
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|d60fdc9dcf9565a60a2a5dffecba1691d9b14ef5
 
 # AptX - from Nokia 7 Plus Onyx_00WW-user 9 PPR1.180610.011 00WW_3_22C release-keys
-vendor/lib64/libaptX_encoder.so|22f5749edb5099526788c22708099a7791dd837f
-vendor/lib64/libaptXHD_encoder.so|c4ad4d6d7615f7df3ea1a4be5c6dae8a8c8ee8b1
+lib64/libaptX_encoder.so|22f5749edb5099526788c22708099a7791dd837f
+lib64/libaptXHD_encoder.so|c4ad4d6d7615f7df3ea1a4be5c6dae8a8c8ee8b1
 
 # Audio
 vendor/firmware/dbmd4_va_fw.bin

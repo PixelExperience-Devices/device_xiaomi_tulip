@@ -150,6 +150,10 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
 PRODUCT_PROPERTY_OVERRIDES +=  \
     ro.vendor.qti.sys.fw.bservice_enable=true
 
+# Make data selection stick in dual SIM devices
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.radio.aosp_usr_pref_sel=true
+
 # Misc
 PRODUCT_PROPERTY_OVERRIDES +=  \
     keyguard.no_require_sim=true  \

@@ -563,8 +563,8 @@ service vendor.dataqti /system/vendor/bin/qti
 
 service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
-    user system
-    group system
+    user root
+    group root
     disabled
     writepid /dev/cpuset/system-background/tasks
 

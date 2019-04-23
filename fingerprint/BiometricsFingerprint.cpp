@@ -15,7 +15,6 @@
  * limitations under the License.
  */
 #define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.xiaomi_tulip"
-#define FP_SENSOR_PROP "ro.boot.fpsensor"
 
 #include <hardware/hw_auth_token.h>
 
@@ -271,6 +270,7 @@ fingerprint_device_t* getFingerprintDevice()
     if (fp_device == nullptr) {
         ALOGE("Failed to load fpc fingerprint module");
     } else {
+        setFpVendorProp("fpc");
         return fp_device;
     }
 
@@ -278,8 +278,11 @@ fingerprint_device_t* getFingerprintDevice()
     if (fp_device == nullptr) {
         ALOGE("Failed to load goodix fingerprint module");
     } else {
+        setFpVendorProp("goodix");
         return fp_device;
     }
+
+    setFpVendorProp("none");
 
     return nullptr;
 }

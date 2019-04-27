@@ -352,9 +352,9 @@
     <ctl name="RX3 Digital Volume" value="84" />
     <ctl name="RX4 Digital Volume" value="84" />
     <ctl name="RX5 Digital Volume" value="84" />
-    <ctl name="ADC1 Volume" value="8" />
-    <ctl name="ADC2 Volume" value="8" />
-    <ctl name="ADC3 Volume" value="8" />
+    <ctl name="ADC1 Volume" value="4" />
+    <ctl name="ADC2 Volume" value="4" />
+    <ctl name="ADC3 Volume" value="4" />
     <ctl name="DEC1 Volume" value="84" />
     <ctl name="DEC2 Volume" value="84" />
     <ctl name="DEC3 Volume" value="84" />
@@ -423,10 +423,10 @@
     <ctl name="IIR1 Enable Band3" value="0" />
     <ctl name="IIR1 Enable Band4" value="0" />
     <ctl name="IIR1 Enable Band5" value="0" />
-    <ctl name="IIR1 INP1 Volume" value="53" />
-    <ctl name="IIR1 INP2 Volume" value="53" />
-    <ctl name="IIR1 INP3 Volume" value="53" />
-    <ctl name="IIR1 INP4 Volume" value="53" />
+    <ctl name="IIR1 INP1 Volume" value="84" />
+    <ctl name="IIR1 INP2 Volume" value="84" />
+    <ctl name="IIR1 INP3 Volume" value="84" />
+    <ctl name="IIR1 INP4 Volume" value="84" />
     <ctl name="IIR1 INP1 MUX" value="ZERO" />
 
     <!-- smart PA TAS2557 -->
@@ -1982,6 +1982,7 @@
 
     <path name="handset-mic">
         <path name="adc1" />
+        <ctl name="ADC1 Volume" value="10" />
 		<ctl name="IIR1 INP1 MUX" value="DEC1" />
     </path>
 
@@ -2269,6 +2270,8 @@
 
     <path name="handset-stereo-dmic-ef">
         <path name="handset-dmic-endfire" />
+        <ctl name="ADC1 Volume" value="10" />
+        <ctl name="ADC3 Volume" value="10" />
     </path>
 
     <path name="speaker-stereo-dmic-ef">

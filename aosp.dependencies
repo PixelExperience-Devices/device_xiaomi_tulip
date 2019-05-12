@@ -18,12 +18,6 @@
     "remote": "github"
   },
   {
-    "repository": "packages_apps_WallpapersBReel2018",
-    "target_path": "packages/apps/WallpapersBReel2018",
-    "branch": "pie",
-    "remote": "pixel-gitlab"
-  },
-  {
     "repository": "darkbeast69/vendor_MiuiCamera",
     "target_path": "vendor/MiuiCamera",
     "branch": "pie",

@@ -83,3 +83,15 @@ void vendor_load_properties()
 
     init_setup_model_properties();
 }
+
+void vendor_load_properties()
+{
+    std::string platform = android::base::GetProperty("ro.board.platform", "");
+
+    if (platform != ANDROID_TARGET)
+        return;
+
+    // fingerprint
+    property_override("ro.build.description", "tulip-user 8.1.0 OPM1.171019.011 10.2.2.0 release-keys");
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/walleye/walleye:9/PQ1A.190105.004/5148680:user/release-keys");
+}

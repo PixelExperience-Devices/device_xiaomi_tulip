@@ -1141,11 +1141,13 @@ vendor/lib64/libvpphvx.so
 vendor/lib64/libvpptestutils.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 
-# Mlipay - from tulip oreo
-etc/init/vendor.xiaomi.hardware.mlipay@1.0-service.rc:vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.0-service.rc|fb02f8c3c7db792ee614d91c4fac810ee5f59507
-lib64/vendor.xiaomi.hardware.mlipay@1.0.so:vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|0038f71979600c51dcbda5e81b46887b230e479a
-vendor/bin/mlipayd|f772b60d0e77fc73b7429229c6104643828770e7
-vendor/lib64/libmlipay.so|bf4f08280cfe292693f6fdcb61893eeaea247db1
+# Mlipay
+vendor/bin/mlipayd@1.1
+vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
+vendor/lib64/libmlipay@1.1.so
+vendor/lib64/libmlipay.so
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
 
 # Perf
 vendor/bin/energy-awareness

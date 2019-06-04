@@ -26,7 +26,7 @@ $(call inherit-product, device/xiaomi/tulip/device.mk)
 $(call inherit-product, vendor/xiaomi/MiuiCamera/config.mk)
 
 # Inherit some common PixelExperience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
 TARGET_BOOT_ANIMATION_RES :=1080
 TARGET_GAPPS_ARCH := arm64
 

@@ -18,8 +18,8 @@
     "remote": "github"
   },
   {
-    "repository": "darkbeast69/vendor_MiuiCamera",
-    "target_path": "vendor/MiuiCamera",
+    "repository": "darkbeast69/vendor_xiaomi_MiuiCamera",
+    "target_path": "vendor/xiaomi/MiuiCamera",
     "branch": "pie",
     "remote": "github"
   }

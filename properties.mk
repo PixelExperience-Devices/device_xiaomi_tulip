@@ -1,3 +1,7 @@
+# Adoptable Storage
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.crypto.volume.options=aes-256-xts
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.bokeh.switch.lux=290 \

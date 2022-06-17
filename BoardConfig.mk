@@ -39,6 +39,7 @@ TARGET_SCREEN_DENSITY := 440
 
 # Kernel
 TARGET_KERNEL_CONFIG := tulip_defconfig
+TARGET_KERNEL_LLVM_BINUTILS := false
 
 # Manifest
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest.xml
@@ -51,6 +52,10 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2018-11-01
+
+# Vendor init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_tulip
+TARGET_RECOVERY_DEVICE_MODULES := libinit_tulip
 
 # Inherit the proprietary files
 include vendor/xiaomi/tulip/BoardConfigVendor.mk

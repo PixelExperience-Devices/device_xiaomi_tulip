@@ -13,6 +13,9 @@ function blob_fixup() {
                 "${PATCHELF}" --add-needed "libcamera_sdm660_shim.so" "$LIBCAMERA_SDM660_SHIM"
             done
             ;;
+        vendor/lib/libMiWatermark.so)
+            "${PATCHELF}" --add-needed "libmiwatermark_shim.so" "${2}"
+            ;;
     esac
 }
 

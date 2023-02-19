@@ -12,9 +12,6 @@ DEVICE_PATH := device/xiaomi/tulip
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
-# Inherit properties.mk
-$(call inherit-product, $(DEVICE_PATH)/properties.mk)
-
 # PRODUCT_SHIPPING_API_LEVEL indicates the first api level, device has been commercially launched on.
 PRODUCT_SHIPPING_API_LEVEL := 27
 
@@ -57,6 +54,9 @@ PRODUCT_PACKAGES += \
 # Powerhint
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Ramdisk
 PRODUCT_PACKAGES += \

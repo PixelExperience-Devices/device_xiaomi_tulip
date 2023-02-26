@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/halcyon_tulip.mk
+    $(LOCAL_DIR)/aosp_tulip.mk
 
 COMMON_LUNCH_CHOICES := \
-    halcyon_tulip-user \
-    halcyon_tulip-userdebug \
-    halcyon_tulip-eng
+    aosp_tulip-user \
+    aosp_tulip-userdebug \
+    aosp_tulip-eng
